@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공문서 작성, 새로운 방법</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Sans KR 폰트 (선택 사항) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Noto Sans KR 폰트 적용 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* 카드 호버 시 약간 떠오르는 효과 */
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        /* 섹션 간 부드러운 전환을 위한 스크롤 마진 */
+        section {
+            scroll-margin-top: 4rem;
+        }
+        /* '다 필요 없고' 텍스트에 애니메이션 */
+        .reveal-text {
+            animation: text-reveal 1s ease-in-out;
+        }
+        @keyframes text-reveal {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- 메인 컨테이너 -->
+    <div class="container mx-auto max-w-5xl px-4 py-12 md:py-20">
+
+        <!-- 1. 도입부 (문제 제기) -->
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                공문서 작성, <span class="text-blue-600">아직도</span> 시간이 부족하신가요?
+            </h1>
+            <p class="text-xl text-gray-600 mb-8">
+                복잡한 규정과 잦은 수정... 시간을 단축하는 '전통적인' 팁들입니다.
+            </p>
+            <a href="#solution" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full text-lg transition-transform duration-300 hover:scale-105 shadow-lg">
+                혹시... 더 쉬운 방법이 궁금하세요?
+            </a>
+        </header>
+
+        <!-- 2. '전통적인' 방법 (인터랙티브 카드) -->
+        <section class="mb-20">
+            <h2 class="text-2xl font-bold text-center text-gray-700 mb-10">
+                공문서 작성 시간을 줄이기 위한 4가지 실용적인 방법
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 카드 1: 템플릿 활용 -->
+                <div class="info-card bg-white p-8 rounded-xl shadow-lg transition-all duration-300 border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-700">1. 표준 서식 및 템플릿 활용</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>기관별 표준 템플릿(두문, 본문, 결문) 미리 저장</li>
+                        <li>자주 쓰는 문구 (관련 근거, 붙임 등) 매크로 활용</li>
+                    </ul>
+                </div>
+
+                <!-- 카드 2: 규정 숙지 -->
+                <div class="info-card bg-white p-8 rounded-xl shadow-lg transition-all duration-300 border-t-4 border-teal-500">
+                    <h3 class="text-2xl font-bold mb-4 text-teal-700">2. 올바른 작성 규정 숙지</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>날짜 표기법 (예: 2024. 6. 17.)</li>
+                        <li>시간 표기법 (예: 15:20)</li>
+                        <li>항목 정렬 단축키 (Shift+Tab) 활용</li>
+                    </ul>
+                </div>
+
+                <!-- 카드 3: 간결한 작성 -->
+                <div class="info-card bg-white p-8 rounded-xl shadow-lg transition-all duration-300 border-t-4 border-purple-500">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-700">3. 간결하고 명확한 내용 작성</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>육하원칙(5W1H)에 따른 명확한 서술</li>
+                        <li>목적에 맞지 않는 불필요한 내용 과감히 생략</li>
+                    </ul>
+                </div>
+
+                <!-- 카드 4: 효율적 검토 -->
+                <div class="info-card bg-white p-8 rounded-xl shadow-lg transition-all duration-300 border-t-4 border-amber-500">
+                    <h3 class="text-2xl font-bold mb-4 text-amber-700">4. 효율적인 검토 프로세스</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>날짜, 수치 등 중요 내용은 2~3회 더블 체크</li>
+                        <li>소리 내어 읽어보며 어색한 문장, 오탈자 확인</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 반전 (The Twist) -->
+        <section id="solution" class="text-center bg-gray-800 text-white p-10 md:p-16 rounded-2xl shadow-2xl my-20">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-6 reveal-text">
+                ...다 필요 없고
+            </h2>
+            <p class="text-2xl md:text-3xl font-bold text-yellow-300 animate-pulse">
+                노트북 LM (NotebookLM) 사용을 권장합니다!
+            </p>
+        </section>
+
+        <!-- 4. 해결책: NotebookLM -->
+        <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-10 md:p-16 rounded-2xl shadow-xl">
+            <h2 class="text-4xl font-extrabold text-center mb-10">
+                공문서 작성을 위한 궁극의 AI 어시스턴트
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- 기능 1 -->
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="text-5xl mb-4">📚</div>
+                    <h3 class="text-2xl font-bold mb-3">규정 & 템플릿 학습</h3>
+                    <p class="text-indigo-100">
+                        기관의 행정 편람, 표준 서식, 표기법 가이드를 '소스'로 업로드하세요. NotebookLM이 모두 학습합니다.
+                    </p>
+                </div>
+                <!-- 기능 2 -->
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="text-5xl mb-4">✍️</div>
+                    <h3 class="text-2xl font-bold mb-3">맞춤형 초안 생성</h3>
+                    <p class="text-indigo-100">
+                        "학습한 서식에 맞춰 OOO 관련 보고서 초안 작성해줘"
+                        단 한 줄의 명령으로 시간을 절약하세요.
+                    </p>
+                </div>
+                <!-- 기능 3 -->
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="text-5xl mb-4">🔍</div>
+                    <h3 class="text-2xl font-bold mb-3">신속한 검토 및 수정</h3>
+                    <p class="text-indigo-100">
+                        "이 문서에서 날짜 표기법이 틀린 부분을 모두 찾아 수정해줘"
+                        복잡한 검토 과정을 AI에게 맡기세요.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12">
+                <a href="https://notebooklm.google.com/" target="_blank" class="bg-white text-blue-700 font-bold py-4 px-10 rounded-full text-xl transition-transform duration-300 hover:scale-105 shadow-lg">
+                    지금 바로 NotebookLM 시작하기
+                </a>
+            </div>
+        </section>
+
+        <!-- 푸터 -->
+        <footer class="text-center mt-16 text-gray-500">
+            <p>이 콘텐츠는 NotebookLM의 장점을 강조하여 업무 효율을 높이기 위해 제작되었습니다.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
